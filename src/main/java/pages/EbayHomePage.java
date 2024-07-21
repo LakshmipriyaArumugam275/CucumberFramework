@@ -5,9 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import util.PropertyReader;
+
 public class EbayHomePage {
 	
-	String sURL="https://www.ebay.com/";
+	String sURL=PropertyReader.readDataFromPropertyFile("Environment", "ebay");
 	private WebDriver driver;
 	private By productNameTxt=By.id("gh-ac");
 	private By productCategoryDrop=By.id("gh-cat");
